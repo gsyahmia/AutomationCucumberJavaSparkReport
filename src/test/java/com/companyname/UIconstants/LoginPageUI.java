@@ -7,6 +7,7 @@ public class LoginPageUI {
 	public LoginPageUI() {	
 	}
 	// Locators
+	public String btn_close_ads = "/html/body/div[7]/div[2]/article/div/div[2]/button/svg";
 	public String btn_first_login_xpath = "//button[contains(text(),'Masuk')]";
 	public String txtbox_usrnm_xpath = "//input[@id='email-phone']";
 	public String btn_next_id = "email-phone-submit";

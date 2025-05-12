@@ -22,10 +22,10 @@ public class LoginStepDefinitions {
 	
 	
 	@Given("Navigate to tokopedia login page")
-	public void navigate_to_tokopedia_login_page() {
-		
+	public void navigate_to_tokopedia_login_page() throws InterruptedException {
+		Thread.sleep(5000);
+		commonLib.scrollDown();
 		commonLib.clickFirstLoginButton();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	    
 	}
 	
@@ -33,7 +33,6 @@ public class LoginStepDefinitions {
 	public void user_input_name_and_password(String username, String password) {
 		commonLib.setUsername(username);
 		commonLib.clickNextButton();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
 		commonLib.setUserPassword(password);
 	}
 
@@ -43,7 +42,6 @@ public class LoginStepDefinitions {
 		commonLib.click("loginUI.btn_click_login");
 		
 		commonLib.clickLoginButton();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
 	}
 	

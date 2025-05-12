@@ -3,7 +3,10 @@ package com.companyname.library;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import com.companyname.UIconstants.LoginPageUI;
 
@@ -24,7 +27,14 @@ public class CommonLibrary {
 		driver.findElement(By.xpath(locatorClick)).click();
 	}
 	
+	
+	public void scrollDown()throws InterruptedException{
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0,250)");
+	}
+	
 	public void clickFirstLoginButton() {
+		driver.findElement(By.xpath(loginUI.btn_close_ads)).click();
 		driver.findElement(By.xpath(loginUI.btn_first_login_xpath)).click();
 	}
 	

@@ -10,7 +10,7 @@ Feature: Login Tokopedia
   |name               | pwd 			|
   |yayaya@yahoo.com   | 987654321 |
   |hello@gmail.com    | 111111111	|
-  
+ @smoke
   Scenario: Login to tokopedia Metode Lain
     Given Navigate to tokopedia login page
     When user click Metode lain button
